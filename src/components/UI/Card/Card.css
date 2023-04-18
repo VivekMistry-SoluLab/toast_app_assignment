@@ -2,7 +2,6 @@
   border-radius: 8px;
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 1rem;
   background: #f1f1f1;
@@ -71,6 +70,19 @@
   justify-content: space-around;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.card-section .main-card-image-section {
+  height: 92px;
+}
+
+.card-section .main-card-image-section img {
+  height: 100%;
+}
 @media (max-width: 425px) {
   .card-section {
     height: 230px;

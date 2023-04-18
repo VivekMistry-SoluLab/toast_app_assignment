@@ -1,0 +1,26 @@
+.main-container {
+  height: calc(100vh - 45px);
+  overflow: auto;
+  padding: 0px 15px;
+}
+
+.main-container .main-items {
+  margin: 25px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-container .main-items span {
+  font-weight: 600;
+}
+
+.main-container .main-items hr {
+  flex: 1 1 auto;
+  height: 0.0625rem;
+  background: rgba(74, 86, 98, 0.1);
+  margin: 0 0.5rem;
+  border: none;
+  pointer-events: none;
+}

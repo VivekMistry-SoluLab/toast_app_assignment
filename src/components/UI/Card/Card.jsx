@@ -3,10 +3,10 @@ import './Card.css';
 import { PLUS_ICON, VEG_ICON } from '../../../assets/images';
 
 const Card = props => {
-  const { item } = props;
+  const { item, isMainCard } = props;
   return (
-    <div className="card-section">
-      <div className="image-section">
+    <div className={`card-section ${isMainCard ? 'no-wrap' : 'wrap'}`}>
+      <div className={isMainCard ? 'main-card-image-section' : 'image-section'}>
         <img src={item?.image} alt={item?.name} />
       </div>
       <div className="description-section">
