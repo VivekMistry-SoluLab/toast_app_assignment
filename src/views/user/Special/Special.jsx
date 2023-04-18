@@ -52,7 +52,7 @@ const HomePage = () => {
       </div>
       <div className="row">
         {FOOD_ITEMS.map(item => (
-          <div className="col-lg-6" key={item.id}>
+          <div className="col-6" key={item.id}>
             <Card item={item} />
           </div>
         ))}
