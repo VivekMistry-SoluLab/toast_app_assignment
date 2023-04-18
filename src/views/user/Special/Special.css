@@ -1,0 +1,57 @@
+.special-container {
+  height: calc(100vh - 184px);
+  overflow: auto;
+  padding: 0px 15px;
+}
+
+.special-container .banner-section {
+  margin: 22px 0 0 0;
+  filter: drop-shadow(0px px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  padding: 6px;
+  background: #f1f1f1;
+  box-shadow: -5px 5px 10px rgba(217, 217, 217, 0.2), 5px -5px 10px rgba(217, 217, 217, 0.2),
+    -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(217, 217, 217, 0.9);
+  position: relative;
+}
+
+.special-container .banner-section svg {
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.special-container .banner-section .banner-text {
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  bottom: 62px;
+  left: 26px;
+  margin-bottom: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.special-container .special-items {
+  margin: 25px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.special-container .special-items span {
+  font-weight: 600;
+}
+
+.special-container .special-items hr {
+  flex: 1 1 auto;
+  height: 0.0625rem;
+  background: rgba(74, 86, 98, 0.1);
+  margin: 0 0.5rem;
+  border: none;
+  pointer-events: none;
+}
