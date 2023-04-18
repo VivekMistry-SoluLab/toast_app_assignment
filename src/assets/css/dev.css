@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'graphik';
+  src: url('../fonts/Graphik-Regular.woff2') format('woff2'),
+       url('../fonts/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-synthesis: style;
+
+}
+
+body {
+  font-family: "graphik","sans-serif";
+  background-color: #F5F5F5;
+}
+
+iframe {
+  pointer-events: none;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.text-center { text-align: "center" }
+
+.btn-light {
+  width: 30px;
+  height: 30px;
+  border-radius: 0.625rem;
+  background: #f1f1f1;
+  border: none;
+  box-shadow: -1px -1px 3px #ffffff, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+}
