@@ -1,0 +1,15 @@
+export { default as LOGO_IMG } from './logo.png';
+export { default as RECORD_VOICE_OVER } from './record_voice_over.png';
+export { default as HASH_TAG_ICON } from './hash_tag_black.png';
+export { default as BOLT_ICON } from './bolt_black.png';
+export { default as BOOK_ICON } from './book_open.png';
+export { default as CART_ICON } from './shopping_bag.png';
+export { default as BANNER_IMG } from './banner.svg';
+export { default as CHOCOLATE_BOWL_IMG } from './chocolate_bowl.png';
+export { default as SUNSET_BOWL_IMG } from './sunset_acai_bowl.png';
+export { default as VEG_ICON } from './veg_icon.png';
+export { default as PLUS_ICON } from './plus_icon.png';
+export { default as MINUS_ICON } from './minus_icon.png';
+export { default as ARROW_LEFT_ICON } from './arrow-left.png';
+export { default as ARROW_RIGHT_ICON } from './arrow-right.png';
+export { default as CHAT_ICON } from './chat_icon.png';

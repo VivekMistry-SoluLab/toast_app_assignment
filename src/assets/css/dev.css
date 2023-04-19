@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'graphik';
+  src: url('../fonts/Graphik-Regular.woff2') format('woff2'),
+       url('../fonts/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-synthesis: style;
+
+}
+
+body {
+  font-family: "graphik","sans-serif";
+  background-color: #F5F5F5;
+}
+
+iframe {
+  pointer-events: none;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 784px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.text-center { text-align: "center" }
+
+.btn-light {
+  width: 30px;
+  height: 30px;
+  border-radius: 0.625rem;
+  background: #f1f1f1;
+  border: none;
+  box-shadow: -1px -1px 3px #ffffff, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+}
+
+.add-remove-btn-section {
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), 0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9), 0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: #f0f0f3;
+  width: 72px;
+  user-select: none;
+  justify-content: space-around;
+}
+
+.text-btn {
+  border: none;
+  padding: 0  ;
+}

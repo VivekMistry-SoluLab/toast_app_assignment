@@ -1,0 +1,106 @@
+.cart-container {
+  height: calc(100vh - 45px);
+  overflow: auto;
+  padding: 0px 15px;
+}
+
+.cart-container .cart-section {
+  margin: 25px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cart-container .cart-section span {
+  font-weight: 600;
+}
+
+.cart-container .cart-section hr {
+  flex: 1 1 auto;
+  height: 0.0625rem;
+  background: rgba(74, 86, 98, 0.1);
+  margin: 0 0.5rem;
+  border: none;
+  pointer-events: none;
+}
+
+.cart-container .orders-section {
+  padding: 14px 0 14px 0;
+  background: transparent;
+  box-shadow: inset -3px -3px 7px #ffffff, inset 2px 2px 5px rgba(174, 174, 192, 0.4);
+  border-radius: 10px;
+}
+
+.orders-section .order-item {
+  box-shadow: none;
+  min-height: auto;
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 6px 9px;
+  margin-bottom: 1rem;
+  border-radius: 0.625rem;
+}
+
+.orders-section .order-item .item-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  flex: 1 1 auto;
+}
+
+.orders-section .item-name {
+  font-weight: 600;
+}
+.orders-section .price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-section .price {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.cart-container .footer-card {
+  background: linear-gradient(135deg, #459eaf 0%, #007991 100%);
+  box-shadow: -5px 5px 10px rgba(205, 205, 205, 0.2), 5px -5px 10px rgba(205, 205, 205, 0.2),
+    -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(205, 205, 205, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px 8px 16px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  width: calc(100% - 16px);
+  max-width: 750px;
+  position: fixed;
+  z-index: 1;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+}
+
+.footer-card .place-order-btn {
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s linear;
+  margin-left: 8px;
+  background: linear-gradient(135deg, #459eaf 0%, #007991 100%);
+  box-shadow: inset -2px 2px 4px rgba(28, 111, 128, 0.2), inset 2px -2px 4px rgba(28, 111, 128, 0.2),
+    inset -2px -2px 4px rgba(42, 167, 192, 0.9), inset 2px 2px 5px rgba(28, 111, 128, 0.9);
+}
