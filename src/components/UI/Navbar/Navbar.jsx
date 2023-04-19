@@ -2,7 +2,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { HASH_TAG_ICON, LOGO_IMG, RECORD_VOICE_OVER } from '../../../assets/images';
+import {
+  ARROW_LEFT_ICON,
+  CHAT_ICON,
+  HASH_TAG_ICON,
+  LOGO_IMG,
+  RECORD_VOICE_OVER,
+} from '../../../assets/images';
 import './Navbar.css';
 
 const NAV_TABS = [
@@ -27,32 +33,50 @@ const NAV_TABS = [
     link: '/store',
   },
 ];
-const Navbar = () => {
+const Navbar = props => {
+  const { hideNavItems } = props;
   return (
     <div className="navbar-section">
-      <div className="navbar-top-section">
-        <div className="logo-section">
-          <img src={LOGO_IMG} alt="logo" />
-          <span>Sacred Earth Cafe</span>
-        </div>
-        <div className="button-section">
+      <div className={`navbar-top-section ${hideNavItems && 'mb-3'}`}>
+        {hideNavItems ? (
+          <div className="back-button-section">
+            <button type="button" className="back-btn">
+              <img src={ARROW_LEFT_ICON} alt="back-arrow" />
+            </button>
+            <span>Place Order</span>
+          </div>
+        ) : (
+          <div className="logo-section">
+            <img src={LOGO_IMG} alt="logo" />
+            <span>Sacred Earth Cafe</span>
+          </div>
+        )}
+        {hideNavItems ? (
           <button type="button" className="btn-light">
-            <img src={RECORD_VOICE_OVER} alt="record_voice_over" />
+            <img src={CHAT_ICON} alt="chat_icon" />
           </button>
-          <button type="button" className="btn-light">
-            <img src={HASH_TAG_ICON} alt="hash_tag_icon" />
-          </button>
-        </div>
+        ) : (
+          <div className="button-section">
+            <button type="button" className="btn-light">
+              <img src={RECORD_VOICE_OVER} alt="record_voice_over" />
+            </button>
+            <button type="button" className="btn-light">
+              <img src={HASH_TAG_ICON} alt="hash_tag_icon" />
+            </button>
+          </div>
+        )}
       </div>
-      <nav>
-        <ul className="nav-items">
-          {NAV_TABS.map(tab => (
-            <li className="nav-item" key={tab.name}>
-              <NavLink to={tab.link}>{tab.name}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {!hideNavItems && (
+        <nav>
+          <ul className="nav-items">
+            {NAV_TABS.map(tab => (
+              <li className="nav-item" key={tab.name}>
+                <NavLink to={tab.link}>{tab.name}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   );
 };
