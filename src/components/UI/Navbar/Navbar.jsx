@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 import {
   ARROW_LEFT_ICON,
@@ -35,12 +35,17 @@ const NAV_TABS = [
 ];
 const Navbar = props => {
   const { hideNavItems } = props;
+  const history = useHistory();
+
+  const handleGoBack = () => {
+    history.push('/special');
+  };
   return (
     <div className="navbar-section">
       <div className={`navbar-top-section ${hideNavItems && 'mb-3'}`}>
         {hideNavItems ? (
           <div className="back-button-section">
-            <button type="button" className="back-btn">
+            <button type="button" className="back-btn" onClick={handleGoBack}>
               <img src={ARROW_LEFT_ICON} alt="back-arrow" />
             </button>
             <span>Place Order</span>

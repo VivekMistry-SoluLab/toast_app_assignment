@@ -1,8 +1,10 @@
 import React from 'react';
-import { MINUS_ICON, PLUS_ICON, VEG_ICON } from '../../../assets/images';
+import { VEG_ICON } from '../../../assets/images';
+import AddRemoveButton from '../../../components/AddRemoveButton/AddRemoveButton';
 
 const OrdersSection = props => {
-  const { data } = props;
+  const { data, addQuantity, removeQuantity } = props;
+
   return (
     <div className="orders-section">
       {data.map(item => (
@@ -17,15 +19,11 @@ const OrdersSection = props => {
                 </div>
               </div>
             </div>
-            <div className="add-remove-btn-section">
-              <button type="button" className="text-btn">
-                <img src={MINUS_ICON} alt="plus-icon" />
-              </button>
-              <span>{item.itemCount}</span>
-              <button type="button" className="text-btn">
-                <img src={PLUS_ICON} alt="plus-icon" />
-              </button>
-            </div>
+            <AddRemoveButton
+              handleAddClick={() => addQuantity(item.id)}
+              handleRemoveClick={() => removeQuantity(item.id)}
+              count={item?.itemCount}
+            />
           </div>
         </div>
       ))}

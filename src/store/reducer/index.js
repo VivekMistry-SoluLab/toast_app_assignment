@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
+import items from './items';
 
-const allReducers = combineReducers({});
+const allReducers = combineReducers({ items });
 
 const rootReducer = (state, action) => {
   if (action.type === 'RESET_APP') {

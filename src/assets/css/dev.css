@@ -21,7 +21,7 @@ iframe {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  max-width: 768px;
+  max-width: 784px;
   margin: 0 auto;
   width: 100%;
 }
