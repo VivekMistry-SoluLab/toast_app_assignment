@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './Card.css';
+
 import { PLUS_ICON, VEG_ICON } from '../../../assets/images';
 import AddRemoveButton from '../../AddRemoveButton/AddRemoveButton';
+import './Card.css';
 
 const Card = props => {
   const { item, isMainCard, addToCart, addQuantity, removeQuantity } = props;

@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { guestRoutes } from './routes';
+import { Loader } from './components';
 
 import 'bootstrap/dist/js/bootstrap';
 
@@ -8,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Custom styles
 import './assets/css/dev.css';
-import { Loader } from './components';
 
 function App() {
   const pathname = window.location.pathname.split('/')[1];

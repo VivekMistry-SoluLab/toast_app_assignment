@@ -10,8 +10,8 @@ import {
   removeItemFromCart,
   removeQuantity,
 } from '../../../store/actions';
-import './Special.css';
 import Layout from '../../Layout/Layout';
+import './Special.css';
 
 const FOOD_ITEMS = [
   {

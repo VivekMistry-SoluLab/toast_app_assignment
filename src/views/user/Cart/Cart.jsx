@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import { ReactComponent as ArrowUp } from '../../../assets/images/arrow_up.svg';
-import './Cart.css';
 import OrdersSection from './OrdersSection';
 import { ARROW_RIGHT_ICON } from '../../../assets/images';
 import {
@@ -13,6 +12,7 @@ import {
   removeQuantity,
 } from '../../../store/actions';
 import Layout from '../../Layout/Layout';
+import './Cart.css';
 
 const Cart = () => {
   const dispatch = useDispatch();
