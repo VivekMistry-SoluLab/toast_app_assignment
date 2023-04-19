@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Custom styles
 import './assets/css/dev.css';
 import { Loader } from './components';
-import Layout from './views/Layout/Layout';
 
 function App() {
   const pathname = window.location.pathname.split('/')[1];
@@ -24,19 +23,17 @@ function App() {
   return (
     <Suspense fallback={<Loader isFullLoader />}>
       <BrowserRouter>
-        <Layout>
-          <Switch>
-            {guestRoutes.map(
-              route =>
-                route.redirectRoute === undefined && (
-                  <Route key={route.name} path={route.path} exact={route.exact} name={route.name}>
-                    <route.component />
-                  </Route>
-                ),
-            )}
-            {redirectHandler()}
-          </Switch>
-        </Layout>
+        <Switch>
+          {guestRoutes.map(
+            route =>
+              route.redirectRoute === undefined && (
+                <Route key={route.name} path={route.path} exact={route.exact} name={route.name}>
+                  <route.component />
+                </Route>
+              ),
+          )}
+          {redirectHandler()}
+        </Switch>
       </BrowserRouter>
     </Suspense>
   );

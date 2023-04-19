@@ -1,14 +1,13 @@
 import { Footer, Navbar } from '../../components';
 
 const Layout = props => {
-  const { children } = props;
-  const pathname = window.location.pathname.split('/')[1];
+  const { children, isCartScreen } = props;
 
   return (
     <div className="main-container">
-      <Navbar hideNavItems={pathname === 'cart'} />
+      <Navbar hideNavItems={isCartScreen} />
       {children}
-      {pathname !== 'cart' && <Footer />}
+      {!isCartScreen && <Footer />}
     </div>
   );
 };

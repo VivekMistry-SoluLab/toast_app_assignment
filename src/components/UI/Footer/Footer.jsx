@@ -1,7 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { BOLT_ICON, BOOK_ICON, CART_ICON } from '../../../assets/images';
+import './Footer.css';
 
 const FOOTER_TABS = [
   {
@@ -20,8 +21,9 @@ const FOOTER_TABS = [
     link: '/cart',
   },
 ];
-// eslint-disable-next-line arrow-body-style
+
 const Footer = () => {
+  const { cart } = useSelector(state => state.items);
   return (
     <footer>
       <div>
@@ -32,7 +34,7 @@ const Footer = () => {
       <ul className="button-section">
         {FOOTER_TABS.map(tab => (
           <li key={tab.name} className={tab.name === 'Cart' && 'position-relative'}>
-            {tab.name === 'Cart' && <span className="item-count">1</span>}
+            {tab.name === 'Cart' && <span className="item-count">{cart?.length}</span>}
             <NavLink to={tab.link} className="footer-nav-item">
               <button type="button" className="btn-light">
                 <img src={tab.image} alt={tab.name} />
