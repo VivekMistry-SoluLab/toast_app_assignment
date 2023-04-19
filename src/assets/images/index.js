@@ -9,3 +9,7 @@ export { default as CHOCOLATE_BOWL_IMG } from './chocolate_bowl.png';
 export { default as SUNSET_BOWL_IMG } from './sunset_acai_bowl.png';
 export { default as VEG_ICON } from './veg_icon.png';
 export { default as PLUS_ICON } from './plus_icon.png';
+export { default as MINUS_ICON } from './minus_icon.png';
+export { default as ARROW_LEFT_ICON } from './arrow-left.png';
+export { default as ARROW_RIGHT_ICON } from './arrow-right.png';
+export { default as CHAT_ICON } from './chat_icon.png';

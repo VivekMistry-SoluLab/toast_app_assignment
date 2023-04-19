@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 export const guestRoutes = [
@@ -31,6 +30,12 @@ export const guestRoutes = [
     name: 'store',
     exact: true,
     component: React.lazy(() => import('../../views/user/Store/Store')),
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    exact: true,
+    component: React.lazy(() => import('../../views/user/Cart/Cart')),
   },
 ];
 

@@ -31,7 +31,8 @@ const Footer = () => {
       </div>
       <ul className="button-section">
         {FOOTER_TABS.map(tab => (
-          <li key={tab.name}>
+          <li key={tab.name} className={tab.name === 'Cart' && 'position-relative'}>
+            {tab.name === 'Cart' && <span className="item-count">1</span>}
             <NavLink to={tab.link} className="footer-nav-item">
               <button type="button" className="btn-light">
                 <img src={tab.image} alt={tab.name} />

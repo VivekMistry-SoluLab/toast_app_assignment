@@ -18,9 +18,7 @@ function App() {
     const guestRoute = guestRoutes
       .filter(item => item.redirectRoute === undefined)
       .map(item => item.path);
-    return !guestRoute.includes(`/${pathname}`) && localStorage.getItem('authToken') == null ? (
-      <Redirect to="/special" />
-    ) : null;
+    return !guestRoute.includes(`/${pathname}`) ? <Redirect to="/special" /> : null;
   };
 
   return (
